@@ -20,7 +20,7 @@ function xmkdirSync (path, mode) {
     } else if (/EEXIST/.test(err.message)) {
       // do nothing, but this might be a file, not a directory
     } else if (/ENOTDIR/.test(err.message)) {
-      console.error('Will not install in a git submodule')
+      console.log('Will not install in a git submodule')
       process.exit(0)
     } else {
       console.error(err)
